@@ -19,6 +19,10 @@ export default function Nav() {
       link: "/dashboard"
     },
     {
+      name: "About",
+      link: "/about"
+    },
+    {
       name: "Login",
       link: "/login"
     },
@@ -34,7 +38,7 @@ export default function Nav() {
           {menuItems.map((item, index) => { 
             const isActive = item.link === path;
             return <li key={index}>
-              <Link className={isActive?"m-2 text-red-800 font-bold":"m-2"}
+              <Link className={isActive?"m-2 text-green-800 font-bold":"m-2"}
               href={item.link}>
               {item.name}
               </Link>

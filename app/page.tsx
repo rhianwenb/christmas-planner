@@ -1,6 +1,5 @@
-
-
 import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -23,6 +22,7 @@ export default function Home() {
             .
           </li>
           <li>Save and see your changes instantly.</li>
+          <li className="text-red-800 pt-2">It's the most wonderful time of the year.</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
