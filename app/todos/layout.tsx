@@ -1,11 +1,19 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import { useState } from 'react';
+
 
 export default function ToDosLayout({ children, }: Readonly<{
     children: React.ReactNode;
   }>) 
-  
+
+
   {
   return (
-    <div>ToDos</div>
+    <div>
+      
+      {children}
+      
+    </div>
   )
 }
