@@ -19,8 +19,8 @@ export default function Nav() {
       link: "/dashboard"
     },
     {
-      name: "About",
-      link: "/about"
+      name: "To Dos",
+      link: "/todos"
     },
     {
       name: "Login",
@@ -30,15 +30,15 @@ export default function Nav() {
 
   return (
     <div>
-        <div className="flex justify-between p-2">
-            <h1 className="font-extrabold text-green-800 text-2xl"> My Christmas Planner</h1>
+        <div className="flex justify-between p-3">
+            <h1 className="font-extrabold text-emerald-800 text-4xl"> My Christmas Planner</h1>
         
         <div>
           <ul className="flex">
           {menuItems.map((item, index) => { 
             const isActive = item.link === path;
             return <li key={index}>
-              <Link className={isActive?"m-2 text-green-800 font-bold":"m-2"}
+              <Link className={isActive?"m-2 text-xl text-emerald-800 font-bold":"text-xl m-2"}
               href={item.link}>
               {item.name}
               </Link>

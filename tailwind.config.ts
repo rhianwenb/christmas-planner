@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "baubles": "url('/app/baubleBackground.svg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
