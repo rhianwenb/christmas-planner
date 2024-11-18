@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 import { useState } from 'react';
 
@@ -50,9 +51,9 @@ export default function ToDoPage() {
   return (
     <div className="container md:mx-auto pt-10">
       <div className="flex flex-col items-center py-5 ">
-        <h1 className="font-bold text-2xl py-1"> The To DO List </h1> 
+        <h1 className="font-bold text-2xl py-1"> Santa's To Do List </h1> 
         <br></br>
-        <h2 className=""> Hot tip: only add things you really want or <em> have </em> to do! </h2>
+        <h2 className=""> Hot tip: only add things you really want or <em> need </em> to do! </h2>
       </div>
 
       <div className="grid justify-center  items-center py-10 text-l">
