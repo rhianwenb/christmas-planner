@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "baubles": "url('/app/baubleBackground.svg')",
+        "baubles": "url('/baubleBackground.jpg')",
       },
       colors: {
         background: "var(--background)",
