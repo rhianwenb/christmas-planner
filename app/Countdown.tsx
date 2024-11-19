@@ -39,23 +39,25 @@ export default function Countdown() {
     <div className="">
         { xmas ? ("Merry Christmas!") : 
         (<div className="flex justify-center">
-            <div className="flex column px-2 text-4xl">
-                {days}
+            <div className="flex-col px-2 text-4xl text-center">
+                <span >{days}</span>     
+                <div className="text-sm mt-1 text-center">Days</div>
             </div>
-            <span className="text-4xl"> : </span>
-            <div className="flex column px-2 text-4xl">
-                {hours}
+                <span className="text-4xl text-center"> : </span>
+            <div className="flex-col px-2 text-4xl text-center">
+                <span>  {hours} </span>
+                <div className="text-sm mt-1 text-center">Hours</div>
             </div>
-            <span className="text-4xl"> : </span>
-            <div className="flex column px-2 text-4xl">
-                {minutes}
+                <span className="text-4xl text-center"> : </span>
+            <div className="flex-col px-2 text-4xl text-center"> 
+                <span> {minutes} </span>
+                <div className="text-sm mt-1 text-center">Minutes</div>
             </div>
-            <span className="text-4xl"> : </span>
-            <div className="flex column px-2 text-4xl">
-                {seconds}
+                <span className="text-4xl text-center"> : </span>
+            <div className="flex-col px-2 text-4xl text-center">
+                <span> {seconds} </span>
+                <div className="text-sm mt-1 text-center">Seconds</div>
             </div>
-            
-
         </div>)
         }
     </div>

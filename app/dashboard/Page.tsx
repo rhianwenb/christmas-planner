@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from 'react';
 import '../globals.css';
 import Countdown from '../Countdown';
+import Notes from '../notes/page';
 
 
 
@@ -47,7 +48,7 @@ export default function Dashboard() {
             
           </div>
           <div className="justify-items-center">
-            <h3 className="text-2xl font-bold"> Food Is Love </h3>
+            <Link href={"/notes"} className="hover:underline"> <h3 className="text-2xl font-bold"> Food Is Love </h3> </Link>
             <p className="p-4"> Make notes about your plans for meals and snacks.</p>
             <Image
               className="dark:invert pt-8 items-end"
