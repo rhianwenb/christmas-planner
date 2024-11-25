@@ -35,7 +35,7 @@ export default function RootLayout({ children, }: Readonly<{
       
       <body className={`${lora.className} bg-stone-100`} >
 
-        <Nav/>
+      
 
         {children}
 

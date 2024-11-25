@@ -14,14 +14,19 @@
   }
 }
 
-#home {
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#background {
   background-image: url('/baubleBackground.svg');
-  background-size: contain;
+  background-size: cover;
   background-attachment: scroll;
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
-  
 };
 
 #dashboard #nav {
