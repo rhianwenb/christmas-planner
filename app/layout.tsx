@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Lora } from "next/font/google";
 import "./globals.css";
 import Nav from "./ui/Nav";
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 
 const geistSans = localFont({
@@ -31,15 +32,29 @@ export default function RootLayout({ children, }: Readonly<{
 
 {
   return (
-    <html lang="en">
-      
-      <body className={`${lora.className} bg-stone-100`} >
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#E7E5E4",
 
-      
+        }
+      }}
+    >
+      <html lang="en">
+        <body className={`${lora.className} bg-stone-100`} >
+        <Nav/>  
+          <SignedOut>
+            <SignInButton/>
+          </SignedOut>
+          <SignedIn>
+            <UserButton/>
+          </SignedIn>
 
-        {children}
-
-      </body>
-    </html>
+          {children}
+          
+          <div className="p-2 fixed bottom-0"> Code by Rhianwen </div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
