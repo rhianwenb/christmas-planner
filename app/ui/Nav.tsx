@@ -3,6 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import '../globals.css'
 
 
 export default function Nav() {
@@ -18,11 +20,14 @@ export default function Nav() {
       name: "Dashboard",
       link: "/dashboard"
     },
-    {
-      name: "Login",
-      link: "/login"
-    },
+    // {
+    //   name: "Login",
+    //   link: "/sign-in"
+    // },
   ];
+
+
+
 
   return (
     <div id="nav">
@@ -30,7 +35,7 @@ export default function Nav() {
             <h1 className="font-extrabold text-emerald-800 text-4xl">Christmas Planner</h1>
         
         <div>
-          <ul className="flex">
+          <ul className="flex items-center text-xl">
           {menuItems.map((item, index) => { 
             const isActive = item.link === path;
             return <li key={index}>
@@ -39,6 +44,18 @@ export default function Nav() {
               {item.name}
               </Link>
             </li> })}
+            <li  className={"mx-2"}>
+            <SignedOut>
+              <SignInButton> 
+                <button> Sign In </button>
+              </SignInButton>
+            </SignedOut>
+            <div id="user-button">
+            <SignedIn>
+              <UserButton/>
+            </SignedIn>
+            </div>
+            </li>
           </ul>
         </div>
         </div>
